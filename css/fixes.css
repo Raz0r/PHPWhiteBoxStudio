@@ -1,0 +1,12 @@
+.ext-strict .x-small-editor .x-form-text {
+    padding-top: 2px !important;
+	padding-bottom: 0px !important;
+}
+
+.x-shadow:first-child {
+	z-index: 0 !important;
+}
+
+#main {
+	z-index: 1 !important;
+}

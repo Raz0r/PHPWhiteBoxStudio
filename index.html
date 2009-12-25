@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head profile="http://gmpg.org/xfn/11">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>PHP White Box Studio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/home.css" />
+		<link rel="shortcut icon" href="images/whitebox-icon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="loading-mask" style="">
+        </div>
+        <div id="loading">
+            <div class="loading-indicator">
+                <img src="images/whitebox.png" alt="PHP White Box Studio" style="margin-right:8px;float:left;vertical-align:top;"/>PHP White Box Studio
+                <br/>
+                <span id="loading-msg">Loading styles and images...</span>
+            </div>
+        </div>
+        <link rel="stylesheet" type="text/css" href="ext/resources/css/ext-all.css" />
+        <link rel="stylesheet" type="text/css" href="css/fixes.css" />
+        <script type="text/javascript">
+            document.getElementById('loading-msg').innerHTML = 'Loading Core API...';
+        </script>
+        <script type="text/javascript" src="ext/adapter/ext/ext-base.js">
+        </script>
+        <script type="text/javascript">
+            document.getElementById('loading-msg').innerHTML = 'Loading UI Components...';
+        </script>
+        <script type="text/javascript" src="ext/ext-all.js"></script>
+        <script type="text/javascript">
+            document.getElementById('loading-msg').innerHTML = 'Initializing...';
+        </script>
+		<script type="text/javascript" src="js/InstallWizard.js"></script>
+		<script type="text/javascript" src="js/StudioViewport.js"></script>
+		<script type="text/javascript" src="js/ProjectsTree.js"></script>
+		<script type="text/javascript" src="js/PresetsTree.js"></script>
+		<script type="text/javascript" src="js/HomePanel.js"></script>
+        <script type="text/javascript" src="js/ScanTokensWindow.js"></script>
+        <script type="text/javascript" src="js/NewProjectWindow.js"></script>
+        <script type="text/javascript" src="js/ScanResultsGrid.js"></script>
+        <script type="text/javascript" src="js/SourceCodePanel.js"></script>	
+        <script type="text/javascript" src="ext/ux/StatusBar/StatusBar.js"></script>        		
+        <script type="text/javascript" src="ext/ux/RowEditor/RowEditor.js"></script>
+        <link rel="stylesheet" type="text/css" href="ext/ux/RowEditor/css/RowEditor.css" />
+		<link rel="stylesheet" type="text/css" href="ext/ux/StatusBar/css/statusbar.css" />
+        <script type="text/javascript" src="ext/ux/GridDragDropRowOrder/GridDragDropRowOrder.js"></script>
+        <script type="text/javascript" src="ext/ux/AnimMsgBox/AnimMsgBox.js"></script>
+		<script type="text/javascript" src="ext/ux/InfoMsgBox/InfoMsgBox.js"></script>
+        <script type="text/javascript" src="codemirror/js/codemirror.js"></script>
+        <script type="text/javascript" src="api.php"></script>
+        <script type="text/javascript">
+            Ext.BLANK_IMAGE_URL = 'ext/resources/images/default/s.gif';
+            Ext.APP_NAME = 'PHP White Box Studio';
+            Ext.PROJECT_ID = 0;
+			Ext.PROJECT_NAME = '';
+			Ext.PRESET_ID = 0;
+			Ext.PRESET_NAME = '';
+			Ext.TASKS = [];
+            
+            Ext.onReady(function(){
+                Ext.QuickTips.init();
+				
+                Ext.Direct.addProvider(Ext.ss.APIDesc);
+                Ext.ux.deleted = [];
+                
+				if (Ext.ss.INSTALLED) {
+					var viewport = new Ext.StudioViewport;					
+					viewport.doLayout();
+				} else {
+					InstallWizard();
+				}
+                
+                setTimeout(function(){
+                    Ext.get('loading').remove();
+                    Ext.get('loading-mask').fadeOut({
+                        remove: true
+                    });
+                }, 250);
+            });
+        </script>
+    </body>
+</html>

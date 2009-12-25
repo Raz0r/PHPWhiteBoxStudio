@@ -1,0 +1,31 @@
+Installing PHP White Box Studio
+    __________________________________________________________________
+Requirements
+ 
+	In order to install the studio, you need to check the following:
+		write permissions to cache/api_cache.txt
+		write permissions to includes/config.php
+		Safe Mode turned off
+		function proc_open() enabled
+		function set_time_limit() enabled
+		PHP >= 5.2.2 (desirable due to better performance of scan process)
+		MySQL >= 4.1
+ 
+    __________________________________________________________________
+Installation
+ 
+	Before you run the studio you should make sure that cache/api_cache.txt
+	is writable. After that you may proceed to the installation wizard which
+	will indicate if there are any additional requirements. After the 
+	installataion has been finished you may start the studio.
+    __________________________________________________________________
+Manual Installation
+ 
+	You can install	the studio manually by following the next steps:
+		* process the contents of sql/install.txt with your database;
+		* open includes/config.php and provide the correct data for the
+		  SQL connection credentials in DSN format; the corresponding
+		  paths for the DIRECTORY ROOT (the studio's directory), DOCUMENT
+		  ROOT (directory above DIRECTORY ROOT) and PHP executable's path;
+		  specify PHP files' extensions delimited by comma; and, finally, 
+		  mark INSTALLED as true

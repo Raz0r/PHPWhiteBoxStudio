@@ -1,0 +1,127 @@
+.home {
+	padding: 5px;
+    background: #fff url(../images/BodyBg.gif) repeat-x 0 0 !important;
+}
+
+.home h1 {
+    color: #fff;
+    font-size: 15px;
+	font-family: "Lucida Grande", "Trebuchet MS", Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+.number {
+	font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+.shadowed {
+	margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+
+.shadowed td {
+	font-family: "Lucida Grande", "Trebuchet MS", Tahoma, Verdana, Helvetica, sans-serif;
+    padding: 0;
+}
+
+.shadowed .stl {
+    width: 25px;
+    height: 22px;
+}
+
+.shadowed .stt {
+    height: 22px;
+}
+
+.shadowed .str {
+    width: 25px;
+    height: 22px;
+}
+
+.shadowed .sll {
+    width: 25px;
+}
+
+.shadowed .smm {
+    height: auto;
+}
+
+.shadowed .srr {
+    width: 25px;
+}
+
+.shadowed .sbl {
+    width: 25px;
+    height: 28px;
+}
+
+.shadowed .sbb {
+    height: 28px;
+}
+
+.shadowed .sbr {
+    width: 25px;
+    height: 28px;
+}
+
+.shadowed h3 {
+    margin-top: 0;
+}
+
+.shadownormal .stl {
+    background: url("../images/s_tl.png") no-repeat;
+}
+
+.shadownormal .stt {
+    background: url("../images/s_tt.png") repeat-x;
+}
+
+.shadownormal .str {
+    background: url("../images/s_tr.png") no-repeat;
+}
+
+.shadownormal .sll {
+    background: url("../images/s_ll.png") bottom no-repeat;
+}
+
+.shadownormal .smm {
+    background: url("../images/s_mm.png") bottom repeat-x;
+}
+
+.shadownormal .srr {
+    background: url("../images/s_rr.png") bottom no-repeat;
+}
+
+.shadownormal .sbl {
+    background: url("../images/s_bl.png") no-repeat;
+}
+
+.shadownormal .sbb {
+    background: url("../images/s_bb.png") repeat-x;
+}
+
+.shadownormal .sbr {
+    background: url("../images/s_br.png") no-repeat;
+}
+
+.shadowed a {
+    color: #0055cc;
+    position: relative;
+}
+
+.shadowed a:visited {
+    color: #0055cc;
+}
+
+.shadowed a:hover {
+    color: #e80019;
+}
+
+.shadowed input {
+    position: relative;
+}
+
+.shadowed label {
+    position: relative;
+}
